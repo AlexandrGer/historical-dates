@@ -1,0 +1,22 @@
+.title {
+  margin: 0;
+  font-family: PT Sans;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 67.2px;
+  text-align: left;
+  color: #42567a;
+  position: relative;
+  padding-left: 76px;
+  margin-top: 170px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 120px;
+    top: 7px;
+    left: 0;
+    background: linear-gradient(180deg, #3877ee -5%, #ef5da8 85%);
+  }
+}
