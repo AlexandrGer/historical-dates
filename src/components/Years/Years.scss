@@ -1,0 +1,21 @@
+.years {
+  width: 973px;
+  height: 160px;
+  margin: 82px 0 0 217px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 160px;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+  &__start {
+    color: #3877ee;
+  }
+
+  &__end {
+    color: #ef5da8;
+  }
+}

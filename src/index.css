@@ -1,1 +1,5 @@
 @import url("./vendor/normalize.css");
+body {
+  font-family: "PT Sans";
+  background-color: #f4f5f9;
+}
