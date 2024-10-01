@@ -1,0 +1,65 @@
+.slider {
+  position: relative;
+  padding: 0 80px 80px;
+
+  button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px #3877ee1a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+  }
+
+  &__button-prev {
+    left: 20px;
+  }
+
+  &__button-next {
+    right: 20px;
+  }
+}
+
+.swiper {
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  cursor: grab;
+
+  &__slide {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__year {
+    font-family: Bebas Neue;
+    font-size: 25px;
+    color: #3877ee;
+    margin: 0;
+  }
+
+  &__fact {
+    font-size: 20px;
+    color: #42567a;
+    margin: 0;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}

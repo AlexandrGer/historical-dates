@@ -3,6 +3,7 @@ import "./App.scss";
 import Title from "../Title/Title";
 import Years from "../Years/Years";
 import ArrowButtons from "../ArrowButtons/ArrowButtons";
+import SliderInfo from "../SliderInfo/SliderInfo";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Title />
         <Years />
         <ArrowButtons />
+        <SliderInfo />
       </div>
     </div>
   );

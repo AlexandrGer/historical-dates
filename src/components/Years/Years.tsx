@@ -19,8 +19,6 @@ export default function Years() {
   const [maxYear, setMaxYear] = useState(
     Math.max(...getAllYears(data[currentEvents].events))
   );
-  const [prewMinYear, setPrewMinYear] = useState(minYear);
-  const [prewMaxYear, setPrewMaxYear] = useState(maxYear);
 
   useEffect(() => {
     const duration = 1;
@@ -29,10 +27,10 @@ export default function Years() {
     const endElement = endRef.current;
 
     if (startElement && endElement) {
-      const oldMin = prewMinYear;
-      const newMin = minYear;
-      const oldMax = prewMaxYear;
-      const newMax = maxYear;
+      const oldMin = minYear;
+      const newMin = Math.min(...getAllYears(data[currentEvents].events));
+      const oldMax = maxYear;
+      const newMax = Math.max(...getAllYears(data[currentEvents].events));
 
       const yearUpdate = (
         element: HTMLDivElement,
@@ -58,21 +56,19 @@ export default function Years() {
       yearUpdate(endElement, oldMax, newMax);
 
       gsap.delayedCall(duration, () => {
-        setPrewMinYear(minYear);
-        setPrewMaxYear(maxYear);
         setMinYear(Math.min(...getAllYears(data[currentEvents].events)));
         setMaxYear(Math.max(...getAllYears(data[currentEvents].events)));
       });
     }
-  }, [currentEvents, data, maxYear, minYear, prewMaxYear, prewMinYear]);
+  }, [currentEvents, data, maxYear, minYear]);
 
   return (
     <div className="years">
       <div ref={startRef} className="years__start">
-        {prewMinYear}
+        {minYear}
       </div>
       <div ref={endRef} className="years__end">
-        {prewMaxYear}
+        {maxYear}
       </div>
     </div>
   );

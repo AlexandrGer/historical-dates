@@ -5,6 +5,7 @@ export interface IMockData {
 }
 
 export interface IEvent {
+  id: number;
   year: number;
   fact: string;
 }
