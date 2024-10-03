@@ -4,6 +4,7 @@ import Title from "../Title/Title";
 import Years from "../Years/Years";
 import ArrowButtons from "../ArrowButtons/ArrowButtons";
 import SliderInfo from "../SliderInfo/SliderInfo";
+import Circle from "../Circle/Circle";
 
 function App() {
   return (
@@ -11,8 +12,11 @@ function App() {
       <div className="page">
         <Title />
         <Years />
-        <ArrowButtons />
-        <SliderInfo />
+        <Circle />
+        <div className="swider-controll">
+          <ArrowButtons />
+          <SliderInfo />
+        </div>
       </div>
     </div>
   );

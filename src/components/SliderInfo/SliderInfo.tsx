@@ -30,20 +30,26 @@ export default function SliderInfo() {
   }, [currentEvents]);
 
   const parametr = {
-    slidesPerView: 3,
     loop: false,
-    spaceBetween: 80,
+    spaceBetween: 25,
     modules: [Pagination, Navigation],
-    speed: 1000,
+    pagination: {
+      clickable: true,
+    },
     navigation: {
       prevEl: ".slider__button-prev",
       nextEl: ".slider__button-next",
+    },
+    breakpoints: {
+      1920: {
+        spaceBetween: 80,
+      },
     },
   };
 
   return (
     <div ref={sliderRef} className="slider">
-      <Swiper {...parametr} className="swiper">
+      <Swiper {...parametr} slidesPerView="auto" className="swiper">
         {data &&
           data[displayedSelected].events
             .sort((a, b) => (a.year > b.year ? 1 : -1))

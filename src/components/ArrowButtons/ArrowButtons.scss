@@ -3,6 +3,8 @@
   flex-direction: column;
   gap: 20px;
 
+  padding: 0 0 0 80px;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 18.12px;
@@ -35,6 +37,34 @@
     &:hover {
       background-color: white;
       transform: scale(1.1);
+    }
+    &:disabled {
+      cursor: default;
+      transform: scale(1);
+      opacity: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .arrowButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+
+    & span {
+      width: 41px;
+      height: 14px;
+    }
+  }
+
+  .arrowButtons__container {
+    gap: 8px;
+
+    & button {
+      width: 25px;
+      height: 25px;
     }
   }
 }

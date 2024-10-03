@@ -13,12 +13,15 @@ export default function ArrowButtons() {
       return (prevSelected + 1) % maxLength;
     });
   };
-
+  console.log(currentEvents);
   return (
     <div className="arrowButtons">
       <span>{`0${currentEvents + 1}/0${maxLength}`}</span>
       <div className="arrowButtons__container">
-        <button onClick={() => handleChangeSelection("prev")}>
+        <button
+          onClick={() => handleChangeSelection("prev")}
+          disabled={currentEvents === 0 ? true : false}
+        >
           <svg width="24" height="24" role="none" viewBox="0 0 16 16">
             <path
               d="M9.6 4l-4 4 4 4 .8-.8L7.2 8l3.2-3.2z"
@@ -26,7 +29,10 @@ export default function ArrowButtons() {
             ></path>
           </svg>
         </button>
-        <button onClick={() => handleChangeSelection("next")}>
+        <button
+          onClick={() => handleChangeSelection("next")}
+          disabled={currentEvents === 5 ? true : false}
+        >
           <svg width="24" height="24" role="none" viewBox="0 0 16 16">
             <path
               d="M6.4 12l4-4-4-4-.8.8L8.8 8l-3.2 3.2z"

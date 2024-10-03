@@ -63,3 +63,52 @@
   opacity: 0;
   pointer-events: none;
 }
+
+.swiper-pagination {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .slider {
+    padding: 0;
+
+    button {
+      display: none;
+    }
+  }
+
+  .swiper {
+    line-height: 30px;
+
+    &__slide {
+      max-width: 166px;
+    }
+
+    &__year {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+
+    &__fact {
+      font-size: 14px;
+      line-height: 20.3px;
+    }
+  }
+
+  .slider .swiper-pagination {
+    width: 86px;
+    display: block;
+    position: fixed;
+    bottom: -31%;
+    left: 33%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #42567a;
+  }
+
+  .swiper-pagination-bullet {
+    height: 6px;
+    width: 6px;
+  }
+}

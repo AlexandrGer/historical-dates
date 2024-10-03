@@ -1,0 +1,89 @@
+.circle {
+  width: 530px;
+  height: 530px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid #42567a1a;
+  position: absolute;
+  top: 215px;
+  left: 452px;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #42567a;
+    cursor: pointer;
+    transition: background-color 0.3s, width 0.3s, height 0.3s;
+
+    &_active,
+    &:hover {
+      width: 56px;
+      height: 56px;
+      border: 1px solid rgba(48, 62, 88, 0.5);
+      background-color: rgba(244, 245, 249, 1);
+
+      & .circle__number {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #42567a;
+  }
+
+  &__number {
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__name {
+    display: none;
+    margin: 0;
+    font-weight: 700;
+    position: absolute;
+    left: 55px;
+
+    &_active {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .circle {
+    left: 355px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .circle {
+    left: 230px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .circle {
+    display: none;
+  }
+}

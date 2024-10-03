@@ -19,3 +19,18 @@
     background: linear-gradient(180deg, #3877ee -5%, #ef5da8 85%);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .title {
+    margin: 0;
+    padding: 0;
+    line-height: 72.46px;
+    margin-top: 59px;
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
